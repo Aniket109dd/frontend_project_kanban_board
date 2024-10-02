@@ -1,38 +1,217 @@
+/* App.css */
 .App {
-  text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  margin-bottom: 20px;
+  width: 150px;
+  /* Adjust as needed */
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu-header img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.menu-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #333;
+  transition: transform 0.3s ease;
+}
+
+.arrow.up {
+  transform: rotate(180deg);
+}
+
+.controls {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
+  gap: 15px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.control-group label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.control-group select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.control-group select:hover {
+  border-color: #007bff;
+}
+
+.kanban-board {
+  display: flex;
+  gap: 20px;
+}
+
+.group {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 300px;
+  /* Match the increased width of the card */
+}
+
+.ticket {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.ticket h4 {
+  margin: 0 0 5px 0;
+}
+
+/* Kanban Card Styles */
+.kanban-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-bottom: 10px;
+  width: 100%;
+  /* Increase the width to avoid overlap */
+}
+
+/* Style for user initials in a circle */
+.user-initials {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+/* Grouping Controls */
+.grouping-controls {
+  margin-bottom: 20px;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Display Button */
+.display-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.display-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Container for Grouping and Sorting options */
+.options-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Grouping and Sorting styles */
+.grouping,
+.sorting {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* Align elements on left and right */
+  align-items: center;
+  /* Vertically align items in the center */
+  padding: 10px;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  /* Vertically align items in the center */
+}
+
+.initials-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  /* Spacing between circle and group name */
+}
+
+h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.right-section {
+  display: flex;
+  gap: 10px;
+  /* Spacing between the plus and threedot icons */
 }
